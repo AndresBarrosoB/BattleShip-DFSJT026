@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>5</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>435</x>
+      <y>270</y>
+      <w>120</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Carro&gt;&gt;
+Package::cl.awakelab.clases
+--
+-cantidadOcupantes: int
+-fechaIngreso: String
+coordenadaColumna: int
+coordenadaFila: int
+--
++Carro(cantidadOcupantes, 
+fechaIngreso, coordenadaColumna,
+coordenadaFila)
++toString...
++get...
++set...
+--
+Clase padre. Se encarga de heredar 
+sus atributos a Kromi, Caguano y 
+Trupalla.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>560</x>
+      <y>440</y>
+      <w>100</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Caguano&gt;&gt;
+Package::cl.awakelab.clases
+--
+-alcanceTiro: int
+-colorConfeti: String
+--
++Caguano(super, alcanceTiro, 
+colorConfeti)
++toString...
++get...
++set...
+--
+Crea objetos de tipo Caguano.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>335</x>
+      <y>440</y>
+      <w>100</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Kromi&gt;&gt;
+Package::cl.awakelab.clases
+--
+-anoFabricacion: String
+-marca: String
+--
++Kromi(super, anoFabricacion, 
+marca)
++toString...
++get...
++set...
+--
+Crea objetos de tipo Kromi.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>295</x>
+      <y>30</y>
+      <w>155</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Tablero&gt;&gt;
+Package::cl.awakelab.clases
+--
+-huevazos: ArrayList&lt;Huevo&gt;
+-carrots: Carro[]
+-cuadricula: String[][]
+-cuadriculaHuevos: String[][]
+-TAMANO_CUADRICULA: int
+-MAXIMO_CARROS: int
+-MAX_RANDOM_FILA_KROMI: int
+-MAX_RANDOM_COLUMNA_CAGUANO: int
+--
++Tablero()
++crearCarros(): void
++lanzarHuevo(coordenadaFIla, 
+coordenadaColumna): void
++mostrarMatriz(String[][] matriz): void
++mostrarInfoCarros(): void
+-calcularPuntajes(): int
+-calcularBonus(): int
+-kromisDerribadas(): int
+-caguanosDerribados(): int
+-trupallasDerribadas(): int
+-crearNumeroColumna(int maximoRandom): int
+-crearNumeroFila(int maximoRandom): int
++get...
++set...
+--
+Crea el entorno del Simulador.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>445</x>
+      <y>440</y>
+      <w>105</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Trupalla&gt;&gt;
+Package::cl.awakelab.clases
+--
+-nivelArmadura: int
+-nombreConductor: String
+--
++Truppala(super, nivelArmadura,
+nombreConductor)
++toString...
++get...
++set...
+--
+Crea objetos de tipo Trupalla.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>205</x>
+      <y>275</y>
+      <w>105</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Huevo&gt;&gt;
+Package::cl.awakelab.clases
+--
+-coordenadaFila: int
+-coordenadaColumna: int
+-puntaje: int
+--
++Huevo(coordenadaFila, 
+coordenadaColumna, 
+puntaje)
++toString...
++get...
++set...
+--
+Crea objetos de tipo Huevo.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>495</x>
+      <y>80</y>
+      <w>145</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Libreria&gt;&gt;
+Package::cl.awakelab.clases
+--
+-fechaIngreso: String[]
+-marca: String[]
+-anoFabricacion: String[]
+-colorConfeti: String[]
+-nombreConductor: String[]
+--
++Libreria()
++rellenarFechaIngreso(): String
++rellenarMarca(): String
++rellenarAnoFabricacion(): String
++rellenarColorConfeti(): String
++rellenarNombreConductor(indice: int): String
+
+--
+Random data.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>395</y>
+      <w>65</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>110.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>490</x>
+      <y>395</y>
+      <w>15</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>550</x>
+      <y>395</y>
+      <w>70</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>250</x>
+      <y>245</y>
+      <w>75</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..1
+&lt; Se aloja en</panel_attributes>
+    <additional_attributes>10.0;60.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>445</x>
+      <y>245</y>
+      <w>60</w>
+      <h>35</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=0..n
+&lt; Se aloja en</panel_attributes>
+    <additional_attributes>100.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>445</x>
+      <y>135</y>
+      <w>60</w>
+      <h>25</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+&lt; Se aloja en</panel_attributes>
+    <additional_attributes>10.0;20.0;100.0;20.0</additional_attributes>
+  </element>
+</diagram>
