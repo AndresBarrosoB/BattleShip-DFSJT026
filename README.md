@@ -1,5 +1,4 @@
 # EvaluacionNro3
-Salu2
 
 Solución Evaluación número 3:
 by Andrés Barroso y Diego Pizarro
